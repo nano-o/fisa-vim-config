@@ -60,6 +60,7 @@ endif
 
 " Now the actual plugins:
 
+Plug 'altercation/vim-colors-solarized'
 " Override configs by directory
 Plug 'arielrossanigo/dir-configs-override.vim'
 " Code commenter
@@ -220,9 +221,15 @@ if has('gui_running') || using_neovim || (&term =~? 'mlterm\|xterm\|xterm-256\|s
     if !has('gui_running')
         let &t_Co = 256
     endif
-    colorscheme vim-monokai-tasty
+    set background=light
+    "let g:solarized_termcolors=256
+    colorscheme solarized
+    "colorscheme vim-monokai-tasty
 else
-    colorscheme delek
+    "colorscheme delek
+    set background=light
+    "let g:solarized_termcolors=256
+    colorscheme solarized
 endif
 
 " needed so deoplete can auto select the first suggestion
